@@ -1,0 +1,44 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+backend/target/
+frontend/dist/
+frontend/node_modules/
+ml-service/venv/
+ml-service/__pycache__/
+ml-service/*/__pycache__/
+ml-service/*.pyc
+ml-service/model/*.joblib
+
+# Docker volumes
+postgres_data/
+
+# Uploaded Files
+uploads/
+backend/uploads/

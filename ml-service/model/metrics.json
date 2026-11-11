@@ -1,0 +1,105 @@
+{
+  "model_version": "v1.0.0-dev",
+  "selected_model": "LogisticRegression",
+  "trained_at_utc": "2026-10-23T17:41:33.505089+00:00",
+  "data_provenance": {
+    "type": "SYNTHETIC_DEVELOPMENT_DATASET",
+    "description": "Reproducible synthetic dataset generated via latent sigmoid modeling with corporate feature distributions for local development and integration testing.",
+    "disclaimer": "These metrics are evaluated on synthetic development data and MUST NOT be represented as real-world production accuracy.",
+    "total_samples": 1200,
+    "train_samples": 960,
+    "test_samples": 240,
+    "class_distribution": {
+      "0": 752,
+      "1": 448
+    }
+  },
+  "cross_validation_5fold": {
+    "strategy": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+    "random_forest": {
+      "accuracy": {
+        "mean": 0.8458,
+        "std": 0.0337
+      },
+      "roc_auc": {
+        "mean": 0.9277,
+        "std": 0.0223
+      },
+      "f1": {
+        "mean": 0.7686,
+        "std": 0.0541
+      },
+      "precision": {
+        "mean": 0.8695,
+        "std": 0.0492
+      },
+      "recall": {
+        "mean": 0.6903,
+        "std": 0.0647
+      }
+    },
+    "logistic_regression": {
+      "accuracy": {
+        "mean": 0.8812,
+        "std": 0.0397
+      },
+      "roc_auc": {
+        "mean": 0.9538,
+        "std": 0.0222
+      },
+      "f1": {
+        "mean": 0.8382,
+        "std": 0.0538
+      },
+      "precision": {
+        "mean": 0.8507,
+        "std": 0.048
+      },
+      "recall": {
+        "mean": 0.8272,
+        "std": 0.0668
+      }
+    }
+  },
+  "holdout_test_evaluation": {
+    "test_samples": 240,
+    "accuracy": 0.9333,
+    "roc_auc": 0.9827,
+    "precision": 0.9111,
+    "recall": 0.9111,
+    "f1_score": 0.9111,
+    "confusion_matrix": {
+      "format": "[[True Negative (AT_RISK), False Positive (Predicted SUCCESS)], [False Negative (Predicted AT_RISK), True Positive (SUCCESS)]]",
+      "matrix": [
+        [
+          142,
+          8
+        ],
+        [
+          8,
+          82
+        ]
+      ]
+    }
+  },
+  "feature_importance": {
+    "baseline_proficiency_avg": 0.8531,
+    "initial_gap_magnitude": -2.2299,
+    "historical_completion_rate": 0.7668,
+    "diagnostic_assessment_score": 1.7525,
+    "weekly_engagement_hours": 1.939,
+    "course_difficulty_level": -1.4734,
+    "mentor_assigned_flag": 1.2413,
+    "tenure_months": 0.4039
+  },
+  "feature_schema": [
+    "baseline_proficiency_avg",
+    "initial_gap_magnitude",
+    "historical_completion_rate",
+    "diagnostic_assessment_score",
+    "weekly_engagement_hours",
+    "course_difficulty_level",
+    "mentor_assigned_flag",
+    "tenure_months"
+  ]
+}
